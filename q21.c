@@ -1,10 +1,14 @@
-int main() {
-    int n = 10;
-    int soma = 0;
-    for (int i = 0; i < n; i++) {  // Loop externo
-        for (int j = 0; j < n; j++) {  // Loop interno
-            soma += i + j;  // Operação de soma
-        }
+int f(int n) {
+    int s = 0;
+    for (int i = 0; i < n * n; i++) {
+        s = s + i;
     }
-    return 0;
+}
+int g(int n) {
+    f(n / 2) * f(n / 2);
+}
+int main() {
+    int d;
+    scanf("%d", &d);
+    g(d);
 }
